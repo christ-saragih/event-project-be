@@ -24,11 +24,21 @@ const doc = {
       },
     },
     schemas: {
-        LoginRequest: {
-            identifier: "csbennefit",
-            password: "password",
-        },
-    }
+      LoginRequest: {
+        identifier: "csbennefit",
+        password: "password",
+      },
+      RegisterRequest: {
+        fullName: "Benefit",
+        username: "csbennefit",
+        email: "csbennefit@gmail.com",
+        password: "password",
+        confirmPassword: "password",
+      },
+      ActivationRequest: {
+        code: "abcdef",
+      },
+    },
   },
 };
 
