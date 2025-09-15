@@ -12,3 +12,7 @@ export const EMAIL_SMTP_USER: string = process.env.EMAIL_SMTP_USER || "";
 export const EMAIL_SMTP_PASS: string = process.env.EMAIL_SMTP_PASS || "";
 export const EMAIL_SMTP_SERVICE_NAME: string = process.env.EMAIL_SMTP_SERVICE_NAME || "";
 export const CLIENT_HOST: string = process.env.CLIENT_HOST || "http://localhost:3001";
+
+export const CLODINARY_CLOUD_NAME: string = process.env.CLODINARY_CLOUD_NAME || "";
+export const CLODINARY_API_KEY: string = process.env.CLODINARY_API_KEY || "";
+export const CLODINARY_API_SECRET: string = process.env.CLODINARY_API_SECRET || "";
