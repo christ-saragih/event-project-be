@@ -11,6 +11,7 @@ import authController from "../controllers/auth.controller";
 import mediaController from "../controllers/media.controller";
 import categoryController from "../controllers/category.controller";
 import regionController from "../controllers/region.controller";
+import eventController from "../controllers/event.controller";
 
 const router = express.Router();
 
@@ -37,6 +38,26 @@ router.delete(
   "/category/:id",
   [authMiddleware, aclMiddleware([ROLES.ADMIN])],
   categoryController.remove
+);
+
+// Event routes
+router.post(
+  "/event",
+  [authMiddleware, aclMiddleware([ROLES.ADMIN])],
+  eventController.create
+);
+router.get("/event", eventController.findAll);
+router.get("/event/:id", eventController.findOne);
+router.get("/event/:slug/slug", eventController.findOneBySlug);
+router.put(
+  "/event/:id",
+  [authMiddleware, aclMiddleware([ROLES.ADMIN])],
+  eventController.update
+);
+router.delete(
+  "/event/:id",
+  [authMiddleware, aclMiddleware([ROLES.ADMIN])],
+  eventController.remove
 );
 
 // Region routes
